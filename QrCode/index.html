@@ -1,0 +1,87 @@
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Khusus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the page aesthetics */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem; /* Responsive padding */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+        .card-container {
+            max-width: 90%; /* Max width for responsiveness */
+            width: 500px; /* Fixed width for larger screens */
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Deeper shadow */
+            padding: 2.5rem; /* Increased padding */
+            text-align: center;
+            border: 1px solid #e2e8f0; /* Subtle border */
+        }
+        h1 {
+            color: #2d3748; /* Darker text for headings */
+            margin-bottom: 1.5rem; /* Spacing below heading */
+        }
+        p {
+            color: #4a5568; /* Slightly lighter text for paragraphs */
+            line-height: 1.6;
+            margin-bottom: 2rem; /* Spacing below paragraph */
+        }
+        audio {
+            width: 100%; /* Full width audio player */
+            max-width: 350px; /* Max width for audio player */
+            margin-left: auto;
+            margin-right: auto;
+            display: block; /* Ensures centering */
+            border-radius: 0.75rem; /* Rounded corners for audio player */
+            outline: none; /* Remove outline on focus */
+        }
+        /* Media queries for smaller screens */
+        @media (max-width: 640px) {
+            .card-container {
+                padding: 1.5rem; /* Smaller padding on mobile */
+            }
+            h1 {
+                font-size: 1.875rem; /* Adjust heading size */
+            }
+            p {
+                font-size: 0.95rem; /* Adjust paragraph size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Main heading for the page -->
+        <h1 class="text-3xl font-extrabold mb-4">Halo! 👋</h1>
+        
+        <!-- Paragraph containing your message -->
+        <p class="text-lg mb-6">
+            Ini adalah pesan singkat khusus untuk Anda. Semoga hari Anda dipenuhi kebahagiaan!
+            Dengarkan audio singkat di bawah ini.
+        </p>
+
+        <!-- Audio player for the MP3 file -->
+        <audio controls class="w-full max-w-sm rounded-lg shadow-md">
+            <!-- Source tag pointing to the MP3 file. Ensure 'audio.mp3' is in the same directory. -->
+            <source src="audio.mp3" type="audio/mpeg">
+            <!-- Fallback text for browsers that don't support the audio element -->
+            Browser Anda tidak mendukung elemen audio.
+        </audio>
+
+        <!-- Concluding remark -->
+        <p class="text-md mt-6 text-gray-600">Terima kasih telah berkunjung dan mendengarkan.</p>
+    </div>
+</body>
+</html>
